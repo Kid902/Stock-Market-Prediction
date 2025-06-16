@@ -46,3 +46,10 @@ stock-market-prediction/
 ## License
 
 This project is licensed under the MIT License.
+
+from models.predictor import StockPredictor
+
+model = StockPredictor()
+model.train('data/stock_data.csv')
+future_price = model.predict(days=30)
+print(f"Predicted price after 30 days: {future_price}")
